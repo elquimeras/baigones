@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
+import './login.dart';
 
-class SecondRoute extends StatelessWidget {
+class FirstRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Route"),
+        title: Text('Mentor match'),
       ),
       body: Center(
         child: RaisedButton(
+          child: Text('Open route'),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginRoute()),
+            );
           },
-          child: Text('Go back!'),
         ),
       ),
     );
