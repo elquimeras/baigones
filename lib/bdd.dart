@@ -12,38 +12,49 @@ class FirebaseDb extends StatelessWidget {
     return Scaffold(
         drawer: MyDrawer(),
         appBar: AppBar(
-            title: Text('Firebase Connect'),
+            title: Text('Preguntas'),
             ),
         body: Center(
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-
                   RaisedButton(
-                      child: Text('Create Record'),
+                      child: Text('Crear Pregunta'),
                       onPressed: () {
                         createRecord();
                       },
                   ),
-
+                  SizedBox(width: 25, height: 20),
                   RaisedButton(
-                      child: Text('View Record'),
-                      onPressed: () {
-                        getData();
-                      },
+                      child: Text('Pregunta 1'),
+                      onPressed: () {},
                   ),
                   RaisedButton(
-                      child: Text('Udate Record'),
-                      onPressed: () {
-                        updateData();
-                      },
+                      child: Text('Pregunta 2'),
+                      onPressed: () {},
                   ),
                   RaisedButton(
-                      child: Text('Delete Record'),
-                      onPressed: () {
-                        deleteData();
-                      },
+                      child: Text('Pregunta N'),
+                      onPressed: () {},
                   ),
+                  // RaisedButton(
+                  //     child: Text('View Record'),
+                  //     onPressed: () {
+                  //       getData();
+                  //     },
+                  // ),
+                  // RaisedButton(
+                  //     child: Text('Udate Record'),
+                  //     onPressed: () {
+                  //       updateData();
+                  //     },
+                  // ),
+                  // RaisedButton(
+                  //     child: Text('Delete Record'),
+                  //     onPressed: () {
+                  //       deleteData();
+                  //     },
+                  // ),
                 ],
             )
         ), //center
@@ -57,9 +68,14 @@ class FirebaseDb extends StatelessWidget {
       'description': 'cuerpo'
     });
     questionNumber++;
+    getData();
   }
+  
+  var questions;
   void getData(){
     databaseReference.once().then((DataSnapshot snapshot) {
+      questions = snapshot.value;
+      
       print('Data : ${snapshot.value}');
     });
   }
