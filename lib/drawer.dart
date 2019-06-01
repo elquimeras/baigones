@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import './login.dart';
+import './bdd.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -37,7 +38,10 @@ class MyDrawer extends StatelessWidget {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FirebaseDb()),
+                );
               },
             ),
             ListTile(
