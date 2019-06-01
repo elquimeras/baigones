@@ -22,6 +22,7 @@ class _LoginPageState extends State<LoginPage> {
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
+
     final passwordField = TextField(
       obscureText: true,
       style: style,
@@ -31,6 +32,7 @@ class _LoginPageState extends State<LoginPage> {
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
+    
     final loginButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
@@ -85,18 +87,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-// class LoginRoute extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("Login Page"),
-//       ),
-//       body: Center(
-//         child: Text(
-//               'Login Page',
-//             ),
-//       ),
-//     );
-//   }
-// }
