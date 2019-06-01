@@ -18,7 +18,7 @@ class WelcomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                Text("Welcome to mentor match -  flutter app"),
+                Text("Welcome to mentor match"),
                 SizedBox(width: 25),
                 SizedBox(
                   child: Image.asset(

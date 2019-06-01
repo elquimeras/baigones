@@ -50,15 +50,13 @@ class FirebaseDb extends StatelessWidget {
     );
   }
 
+  var questionNumber = 0;
   void createRecord(){
-    databaseReference.child("1").set({
-      'title': 'Mastering EJB',
-      'description': 'Programming Guide for J2EE'
+    databaseReference.child('questions/$questionNumber').set({
+      'title': 'Pregunta $questionNumber',
+      'description': 'cuerpo'
     });
-    databaseReference.child("2").set({
-      'title': 'Flutter in Action',
-      'description': 'Complete Programming Guide to learn Flutter'
-    });
+    questionNumber++;
   }
   void getData(){
     databaseReference.once().then((DataSnapshot snapshot) {
