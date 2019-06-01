@@ -4,7 +4,8 @@ import 'home.dart';
 void main() {
   runApp(MaterialApp(
     title: 'Navigation Basics',
-    home: FirstRoute(),
+    // home: HomePage(),
+    home: HomePage(),
   ));
 }
 
