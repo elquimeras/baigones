@@ -1,6 +1,6 @@
 # baigones
 
-A new Flutter project.
+Flutter Hackanton APP
 
 ## Getting Started
 
