@@ -32,10 +32,10 @@ class WelcomePage extends StatelessWidget {
                     Expanded(child: RaisedButton(
                         child: Text('Sign in'),
                         onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => LoginPage()),
-                            );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LoginPage()),
+                          );
                         },
                       ),
                     ),
@@ -43,7 +43,10 @@ class WelcomePage extends StatelessWidget {
                     Expanded(child: RaisedButton(
                         child: Text('Sign up'),
                         onPressed: () {
-                          // Navigate to second route when tapped.
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LoginPage()),
+                          );
                         },
                       ),
                     )

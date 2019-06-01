@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:baigones/home.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key, this.title}) : super (key : key);
@@ -32,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
-    
+
     final loginButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
@@ -40,7 +41,9 @@ class _LoginPageState extends State<LoginPage> {
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {},
+        onPressed: () {
+          
+        },
         child: Text("Login",
             textAlign: TextAlign.center,
             style: style.copyWith(
@@ -48,9 +51,20 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
 
+    final continueButton = FlatButton(
+            child: Text('Continue without login',
+                    style: new TextStyle(fontSize: 18.0, fontWeight: FontWeight.w300)),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
+          );
+
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login Page"),
+        title: Text("Mentors Login"),
       ),
       body: Center(
         child: Container(
@@ -76,6 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: 35.0,
                 ),
                 loginButon,
+                continueButton,
                 SizedBox(
                   height: 15.0,
                 ),
